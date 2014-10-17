@@ -1,0 +1,41 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "colors";
+@import "typography";
+
+// Page Styling
+
+
+// Film Card Styling
+
+.film-text-color {
+	color: $film-color;
+}
+
+.film-highlight-color {
+	background-color: $film-color;
+}
+
+// Concert Card Styling
+
+.concert-text-color {
+	color: $concert-color;
+}
+
+.concert-highlight-color {
+	background-color: $concert-color;
+}
+
+// Music Card Styling
+
+.music-text-color {
+	color: $music-color;
+}
+
+.music-highlight-color {
+	background-color: $music-color;
+}
