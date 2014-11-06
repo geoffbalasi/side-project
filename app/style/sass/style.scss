@@ -6,19 +6,58 @@
 @import "compass/reset";
 @import "colors";
 @import "typography";
+@import "sizing";
+
+/* Styling Rules:
+	Selectors in alphabetical order in each sub-section
+
+	Order within a declaration block:
+		- positioning
+		- display
+		- color
+		- font
+*/
 
 // Page Styling
 
-
-// Film Card Styling
-
-.film-text-color {
-	color: $film-color;
+body {
+	margin: 0px;
+	background-color: $page-background-header;
 }
 
-.film-highlight-color {
+p, div, span {
+	font: $default-font;
+	color: $default-font-color;
+	position: relative;
+}
+
+
+
+
+// Default Card Styling
+
+.card {
+	width: 400px;
+	height: 500px;
+	background: $card-background-color;
+	margin: $large-pixel;
+	padding: $medium-pixel;
+	box-shadow: $shadow;
+}
+
+.date {
+	position: absolute;
+	right: 10px;
+	padding: 3px 7px 1px 7px;
 	background-color: $film-color;
+	color: $default-light-font;
+	font: $h2-bold;	
+	text-align: center;
+	border-radius: $default-radius;
 }
+
+
+
 
 // Concert Card Styling
 
@@ -28,6 +67,16 @@
 
 .concert-highlight-color {
 	background-color: $concert-color;
+}
+
+// Film Card Styling
+
+.film-text-color {
+	color: $film-color;
+}
+
+.film-highlight-color {
+	background-color: $film-color;
 }
 
 // Music Card Styling

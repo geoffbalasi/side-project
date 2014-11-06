@@ -1,4 +1,9 @@
 
+// Standards
+$default-font: 12px Arial;
+$default-font-color: #555;
+$default-light-font: #FFF;
+
 // Font weights
 $light: 100;
 $regular: 400;
@@ -8,4 +13,12 @@ $bold: 700;
 $base-font-family: sans-serif;
 $base-font-weight: $regular;
 $base-font-size: 13px;
+
+// Header and Body Fonts
+$h1: normal 36x Arial;
+$h1-bold: bold 36px Arial;
+$h2: normal 18px Arial;
+$h2-bold: bold 18px Arial;
+$h3: normal 14px Arial;
+$h3-bold: bold 14px Arial;
 

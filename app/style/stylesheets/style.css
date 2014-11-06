@@ -67,32 +67,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 15, ../sass/style.scss */
-.film-text-color {
-  color: #ec6c20;
+/* Styling Rules:
+	Selectors in alphabetical order in each sub-section
+
+	Order within a declaration block:
+		- positioning
+		- display
+		- color
+		- font
+*/
+/* line 23, ../sass/style.scss */
+body {
+  margin: 0px;
+  background-color: #eeeeee;
 }
 
-/* line 19, ../sass/style.scss */
-.film-highlight-color {
+/* line 28, ../sass/style.scss */
+p, div, span {
+  font: 12px Arial;
+  color: #555555;
+  position: relative;
+}
+
+/* line 39, ../sass/style.scss */
+.card {
+  width: 400px;
+  height: 500px;
+  background: white;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 1px 1px 2px #cccccc;
+}
+
+/* line 48, ../sass/style.scss */
+.date {
+  position: absolute;
+  right: 10px;
+  padding: 3px 7px 1px 7px;
   background-color: #ec6c20;
+  color: white;
+  font: bold 18px Arial;
+  text-align: center;
+  border-radius: 3px;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .concert-text-color {
   color: white;
 }
 
-/* line 29, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .concert-highlight-color {
   background-color: white;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
+.film-text-color {
+  color: #ec6c20;
+}
+
+/* line 78, ../sass/style.scss */
+.film-highlight-color {
+  background-color: #ec6c20;
+}
+
+/* line 84, ../sass/style.scss */
 .music-text-color {
   color: #00b548;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .music-highlight-color {
   background-color: #00b548;
 }
