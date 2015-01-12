@@ -26,20 +26,9 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
 </head>
-<body ng-controller="CardListCtrl">
+<body>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-  <h1>{{name}}</h1>
-  <ul>
-    <li ng-repeat="card in cards">
-      <span>{{card.name}}</span>
-      <p>{{card.consensus}}</p>
-    </li> 
-  </ul>
-  
-  <p>Total number of cards: {{cards.length}}</p>
+<div ng-view></div>
   
 </body>
 </html>

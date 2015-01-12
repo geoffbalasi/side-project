@@ -1,28 +1,23 @@
 'use strict';
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
+/* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
-describe('my app', function() {
-
-  browser.get('index.html');
-
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
-
-
-  describe('view1', function() {
-
+describe('Seer App', function() {
+  describe('Card list view', function() {
     beforeEach(function() {
-      browser.get('index.html#/view1');
+      browser.get('index.html');
     });
-
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+    
+    it('should filter cards as a user types into the search box', function() {
+      
+      var cardList = element.all(by.repeater('card in cards'));
+      var query = element(by.model('query'));
+      
+      expect(cardList.count()).toBe(4);
+      
+      query.sendKeys('performance');
+      expect(cardList.count()).toBe(2);
     });
-
   });
-
 });

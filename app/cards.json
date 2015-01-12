@@ -1,0 +1,19 @@
+[
+    {"name": "Gone Girl",
+     "imageUrl": "http://www.reverbstreetpress.com/online/wp-content/uploads/2014/10/Gone-Girl-2014-film-poster-50x50.jpg",
+     "tagline": "You don't know what you've got 'til it's...",
+     "consensus": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike."
+    },
+    {"name": "The Imitation Game",
+     "tagline": "Behind every code is an enigma",
+     "consensus": "With an outstanding starring performance from Benedict Cumberbatch illuminating its fact-based story, The Imitation Game serves as an eminently well-made entry in the \"prestige biopic\" genre."
+    },
+    {"name": "Taken 3",
+     "tagline": "It Ends Here",
+     "consensus": "Hampered by toothless PG-13 action sequences, incoherent direction, and a hackneyed plot, Taken 3 serves as a clear signal that it's well past time to retire this franchise."
+    },
+    {"name": "Selma",
+     "tagline": "One Dream Can Change the World",
+     "consensus": "Fueled by a gripping performance from David Oyelowo, Selma draws inspiration and dramatic power from the life and death of Martin Luther King, Jr. -- but doesn't ignore how far we remain from the ideals his work embodied."
+    }
+]
