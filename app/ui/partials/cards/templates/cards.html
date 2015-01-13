@@ -1,0 +1,24 @@
+
+<div class="card">
+	<div class="date">{{card.date}}</div>
+	<div class="header"> 
+		<img ng-src="{{card.imageUrl}}">
+	</div>
+	<div class="title film-text-color">{{card.title}}</div>
+	<div class="sub-title">{{card.tagline}}</div> 
+	<div class="content-block"> 
+		<div> 
+			<span> {{card.time}} - {{card.rating}} - </span>
+			<span> {{card.genre}} </span> 
+		</div>
+		<div> {{card.creators}} </div>
+	</div>
+	<div class="content-block"> 
+		<div> 
+			<span> {{card.score-percentage}}% </span> 
+			<span> {{card.source}} </span> 
+		</div>
+		<div> {{card.consensus}} </div>
+	</div>
+
+</div>

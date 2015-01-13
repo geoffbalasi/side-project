@@ -11,7 +11,7 @@
       function ($routeProvider) {
         $routeProvider.
         when('/', {
-          templateUrl: 'partials/main-view.html',
+          templateUrl: 'ui/partials/main-view.html',
           controller: 'CardListCtrl'
         }).
         otherwise({
