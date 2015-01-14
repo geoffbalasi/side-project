@@ -16,8 +16,8 @@ describe('Seer App', function() {
       
       expect(cardList.count()).toBe(4);
       
-      query.sendKeys('performance');
-      expect(cardList.count()).toBe(2);
+      query.sendKeys('eightaudaciouseggs');
+      expect(cardList.count()).toBe(0);
     });
   });
 });
