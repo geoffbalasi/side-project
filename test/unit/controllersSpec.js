@@ -28,4 +28,21 @@ describe('Seer controllers', function() {
       expect(scope.name).toBe('Seer');
     });
   });
+  describe('CardCtrl', function(){
+    var scope, ctrl;
+    
+    beforeEach(module('SeerApp'));
+    beforeEach(inject(function($rootScope, $controller) {
+      scope = $rootScope.$new();
+      ctrl = $controller('CardCtrl', {$scope: scope});
+    }));
+    
+    it('should change card size', function() {
+      expect(scope.size).toBe('closed');
+      scope.changeSize();
+      expect(scope.size).toBe('open');
+      scope.changeSize();
+      expect(scope.size).toBe('closed');
+    });
+  });
 });

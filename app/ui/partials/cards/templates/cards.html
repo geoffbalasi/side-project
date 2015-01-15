@@ -1,7 +1,8 @@
+<div ng-switch="size">
 
-<div class="card">
+<div ng-switch-when='open' class="card">
 	<div class="date">{{card.date}}</div>
-	<div class="header"> 
+	<div class="header" ng-click="changeSize()"> 
 		<img ng-src="{{card.imageUrl}}">
 	</div>
 	<div class="title film-text-color">{{card.title}}</div>
@@ -19,6 +20,18 @@
 			<span> {{card.source}} </span> 
 		</div>
 		<div> {{card.consensus}} </div>
+    <div> size is {{size}} </div>
 	</div>
 
+</div>
+  
+<div ng-switch-default class="card small" ng-click="changeSize()">
+  <div class="date">{{card.date}}</div>
+	<div class="header" ng-click="changeSize()"> 
+		<img ng-src="{{card.imageUrl}}">
+	</div>
+	<div class="title film-text-color">{{card.title}}</div>
+  <div> size is {{size}} </div>
+</div>
+  
 </div>

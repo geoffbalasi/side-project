@@ -10,5 +10,21 @@ seerControllers.controller('CardListCtrl', ['$scope', '$http',
         $scope.cards = data;
     });
   
-  $scope.name = 'Seer';
-}]);
+    $scope.name = 'Seer';
+  }
+]);
+
+seerControllers.controller('CardCtrl', ['$scope',
+  function($scope) {
+    $scope.size = 'closed';
+    $scope.changeSize = function() {
+      if($scope.size === 'closed')
+      {
+        $scope.size = 'open';
+      }
+      else {
+        $scope.size = 'closed';
+      }
+    };
+  }  
+]);

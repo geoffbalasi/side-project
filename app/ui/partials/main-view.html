@@ -6,7 +6,7 @@
     Search: <input ng-model="query">
   </div>
   <span ng-repeat="card in cards | filter:query">
-    <div ng-include src="'ui/partials/cards/templates/cards.html'" ></div>
+    <div ng-include src="'ui/partials/cards/templates/cards.html'" ng-controller="CardCtrl"></div>
   </span> 
 
   
