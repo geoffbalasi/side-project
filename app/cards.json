@@ -1,5 +1,6 @@
 [
-    {"title": "Gone Girl",
+    {"size": "closed",
+     "title": "Gone Girl",
      "imageUrl": "http://www.reverbstreetpress.com/online/wp-content/uploads/2014/10/Gone-Girl-2014-film-poster-50x50.jpg",
      "tagline": "You don't know what you've got 'til it's...",
      "time": "2:39",
@@ -11,7 +12,8 @@
      "genre": "Mystery",
      "consensus": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike."
     },
-    {"title": "Gone Girl 2",
+    {"size": "closed",
+      "title": "Gone Girl 2",
      "imageUrl": "http://www.reverbstreetpress.com/online/wp-content/uploads/2014/10/Gone-Girl-2014-film-poster-50x50.jpg",
      "tagline": "You don't know what you've got 'til it's...",
      "time": "2:39",
@@ -23,7 +25,8 @@
      "genre": "Mystery",
      "consensus": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike."
     },
-    {"title": "Gone Girl 3",
+    {"size": "open",
+      "title": "Gone Girl 3",
      "imageUrl": "http://www.reverbstreetpress.com/online/wp-content/uploads/2014/10/Gone-Girl-2014-film-poster-50x50.jpg",
      "tagline": "You don't know what you've got 'til it's...",
      "time": "2:39",
@@ -35,7 +38,8 @@
      "genre": "Mystery",
      "consensus": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike."
     },
-    {"title": "Gone Girl 4",
+    {"size": "closed",
+      "title": "Gone Girl 4",
      "imageUrl": "http://www.reverbstreetpress.com/online/wp-content/uploads/2014/10/Gone-Girl-2014-film-poster-50x50.jpg",
      "tagline": "You don't know what you've got 'til it's...",
      "time": "2:39",
