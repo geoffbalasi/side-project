@@ -16,7 +16,7 @@ seerControllers.controller('CardListCtrl', ['$scope', '$http',
 
 seerControllers.controller('CardCtrl', ['$scope',
   function($scope) {
-    $scope.size = $scope.card.size;
+    $scope.size = (typeof $scope.card !== 'undefined') ? $scope.card.size : 'closed';
     $scope.changeSize = function() {
       if($scope.size === 'closed')
       {
