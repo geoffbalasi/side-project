@@ -6,7 +6,14 @@
     Search: <input ng-model="query">
   </div>
   <span ng-repeat="card in cards | filter:query">
-    <div ng-include src="'ui/partials/cards/templates/cards.html'" ng-controller="CardCtrl"></div>
+    <div ng-switch="card.type">
+      <div ng-switch-when='music'>
+        <div ng-include src="'ui/partials/cards/templates/musicCard.html'" ng-controller="CardCtrl"></div>
+      </div>
+      <div ng-switch-default>
+        <div ng-include src="'ui/partials/cards/templates/filmCard.html'" ng-controller="CardCtrl"></div>
+      </div>
+    </div>
   </span> 
 
   

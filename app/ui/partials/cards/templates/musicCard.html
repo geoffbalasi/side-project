@@ -1,0 +1,20 @@
+<div ng-switch="size" id="music">
+
+<div ng-switch-when='open' class="card">
+	<div class="date">{{card.date}}</div>
+	<div class="header" ng-click="changeSize()"> 
+		<img ng-src="{{card.art}}">
+	</div>
+  <div class="title music-text-color">{{card.artist}}</div>
+	<div class="title music-text-color">{{card.title}}</div>
+</div>
+  
+<div ng-switch-default class="card small" ng-click="changeSize()">
+  <div class="date">{{card.date}}</div>
+	<div class="header"> 
+		<img ng-src="{{card.art}}">
+	</div>
+	<div class="title music-text-color">{{card.title}}</div>
+</div>
+  
+</div>

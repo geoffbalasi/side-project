@@ -50,6 +50,13 @@ p, div, span {
 			padding: 7px;
 		}
 	}
+  
+  .header {
+    img {
+      height: 80px;
+      width: auto;
+    }
+  }
 }
 
 .card.small {
@@ -60,7 +67,6 @@ p, div, span {
 	position: absolute;
 	right: 10px;
 	padding: 3px 7px 1px 7px;
-	background-color: $film-color;
 	color: $default-light-font;
 	font: $h2-bold;	
 	text-align: center;
@@ -87,6 +93,10 @@ p, div, span {
 	background-color: $film-color;
 }
 
+#film .date {
+  background-color: $film-color;
+}
+
 // Music Card Styling
 
 .music-text-color {
@@ -95,4 +105,8 @@ p, div, span {
 
 .music-highlight-color {
 	background-color: $music-color;
+}
+
+#music .date {
+  background-color: $music-color;
 }

@@ -1,4 +1,4 @@
-<div ng-switch="size">
+<div ng-switch="size" id="film">
 
 <div ng-switch-when='open' class="card">
 	<div class="date">{{card.date}}</div>
@@ -20,7 +20,6 @@
 			<span> {{card.source}} </span> 
 		</div>
 		<div> {{card.consensus}} </div>
-    <div> size is {{size}} </div>
 	</div>
 
 </div>
@@ -31,7 +30,6 @@
 		<img ng-src="{{card.imageUrl}}">
 	</div>
 	<div class="title film-text-color">{{card.title}}</div>
-  <div> size is {{size}} </div>
 </div>
   
 </div>
