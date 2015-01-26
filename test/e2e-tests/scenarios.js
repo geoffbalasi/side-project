@@ -14,7 +14,7 @@ describe('Seer App', function() {
       var cardList = element.all(by.repeater('card in cards'));
       var query = element(by.model('query'));
       
-      expect(cardList.count()).toBe(4);
+      expect(cardList.count()).toBe(5);
       
       query.sendKeys('eightaudaciouseggs');
       expect(cardList.count()).toBe(0);

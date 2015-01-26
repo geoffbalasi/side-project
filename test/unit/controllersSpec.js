@@ -2,11 +2,23 @@
 
 /* jasmine specs for controllers go here */
 describe('Seer controllers', function() {
+  
+  beforeEach(function(){
+    this.addMatchers({
+      toEqualData: function(expected) {
+        return angular.equals(this.actual, expected);
+      }
+    });
+  });
+  
+  beforeEach(module('seerServices'));
+  
   describe('CardListCtrl', function(){
     var scope, ctrl, $httpBackend;
     
     //Load our app module definition before each test.
     beforeEach(module('SeerApp'));
+    
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('cards.json'). 
@@ -18,10 +30,11 @@ describe('Seer controllers', function() {
     
     
     it('should create "cards" model with 2 cards', function() {
-      expect(scope.cards).toBeUndefined();
+      expect(scope.cards).toEqualData([]);
       $httpBackend.flush();
       
-      expect(scope.cards).toEqual([{name: 'Gone Girl'}, {name: 'Selma'}]);
+      expect(scope.cards).toEqualData(
+        [{name: 'Gone Girl'}, {name: 'Selma'}]);
     });
     
     it('should be named "Seer"', function() {

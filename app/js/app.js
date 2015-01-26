@@ -5,7 +5,8 @@
     // Declare app level module which depends on views, and components
     angular.module('SeerApp', [
         'ngRoute',
-        'seerControllers'
+        'seerControllers',
+        'seerServices'
     ]).
     config(['$routeProvider', 
       function ($routeProvider) {

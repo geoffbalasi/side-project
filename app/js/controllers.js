@@ -4,12 +4,9 @@
 
 var seerControllers = angular.module('seerControllers', []);
 
-seerControllers.controller('CardListCtrl', ['$scope', '$http', 
-  function($scope, $http) {
-    $http.get('cards.json').success(function(data) {
-        $scope.cards = data;
-    });
-  
+seerControllers.controller('CardListCtrl', ['$scope', 'CardService', 
+  function($scope, CardService) {
+    $scope.cards = CardService.query();
     $scope.name = 'Seer';
   }
 ]);
