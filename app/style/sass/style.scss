@@ -35,7 +35,7 @@ p, div, span {
 
 .card {
 	width: 400px;
-	height: 300px;
+	height: $open-card-height;
 	background: $card-background-color;
 	margin: $large-pixel;
 	padding: $medium-pixel;
@@ -60,7 +60,7 @@ p, div, span {
 }
 
 .card.small {
-    height: 94px;
+    height: $closed-card-height;
 }
 
 .date {

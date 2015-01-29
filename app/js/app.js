@@ -2,9 +2,10 @@
 
 (function () { 'use strict';
 
-    // Declare app level module which depends on views, and components
+    // Declare app level module and dependencies
     angular.module('SeerApp', [
         'ngRoute',
+        'ngAnimate',
         'seerControllers',
         'seerServices'
     ]).
