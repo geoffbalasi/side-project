@@ -6,7 +6,7 @@
     angular.module('SeerApp', [
         'ngRoute',
         'ngAnimate',
-        'seerControllers',
+        'SeerApp.controllers',
         'seerServices'
     ]).
     config(['$routeProvider', 
@@ -14,7 +14,7 @@
         $routeProvider.
         when('/', {
           templateUrl: 'ui/partials/main-view.html',
-          controller: 'CardListCtrl'
+          controller: 'mainController'
         }).
         otherwise({
           redirectTo: '/'
