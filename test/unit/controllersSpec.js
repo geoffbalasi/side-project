@@ -13,7 +13,7 @@ describe('Seer controllers', function() {
   
   beforeEach(module('seerServices'));
   
-  describe('CardListCtrl', function(){
+  describe('mainController', function(){
     var scope, ctrl, $httpBackend;
     
     //Load our app module definition before each test.
@@ -25,7 +25,7 @@ describe('Seer controllers', function() {
         respond([{name: 'Gone Girl'}, {name: 'Selma'}]);
       
       scope = $rootScope.$new();
-      ctrl = $controller('CardListCtrl', {$scope: scope});
+      ctrl = $controller('mainController', {$scope: scope});
     }));
     
     
@@ -41,13 +41,13 @@ describe('Seer controllers', function() {
       expect(scope.name).toBe('Seer');
     });
   });
-  describe('CardCtrl', function(){
+  describe('cardController', function(){
     var scope, ctrl;
     
     beforeEach(module('SeerApp'));
     beforeEach(inject(function($rootScope, $controller) {
       scope = $rootScope.$new();
-      ctrl = $controller('CardCtrl', {$scope: scope});
+      ctrl = $controller('cardController', {$scope: scope});
     }));
     
     it('should change card size', function() {

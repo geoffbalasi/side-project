@@ -4,3 +4,4 @@ app/style/stylesheets
 chromedriver_2.10.zip
 selenium-server-standalone-2.43.1.jar
 app/bower_components
+test_out

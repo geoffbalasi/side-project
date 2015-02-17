@@ -10,6 +10,7 @@ module.exports = function(config){
       'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/components/**/*.js',
+      'app/js/Controllers/mainController.js',
       'app/js/**/*.js',
       'test/unit/**/*.js'     
     ],
@@ -26,7 +27,9 @@ module.exports = function(config){
             'karma-jasmine',
             'karma-junit-reporter'
             ],
-
+    
+    reporters: ['progress', 'junit'],
+    
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
