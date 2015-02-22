@@ -4,15 +4,15 @@
 
 angular.module('SeerApp.controllers').controller('cardController', ['$scope', function($scope) {
 
-    $scope.size = (typeof $scope.card !== 'undefined') ? $scope.card.size : 'closed';
+    $scope.open = (typeof $scope.card !== 'undefined') ? $scope.card.open : false;
 
     $scope.changeSize = function() {
-        if($scope.size === 'closed')
+        if($scope.open === false)
         {
-            $scope.size = 'open';
+            $scope.open = true;
         }
         else {
-            $scope.size = 'closed';
+            $scope.open = false;
         }
     };
 }]);

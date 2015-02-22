@@ -5,17 +5,11 @@
   <div>
     Search: <input ng-model="query">
   </div>
-  <span ng-repeat="card in cards | filter:query">
-    <div ng-switch="card.type">
-      <div ng-switch-when='music'>
-        <div ng-include src="'ui/partials/cards/templates/musicCard.html'" ng-controller="cardController"></div>
+  <div class="grid">
+    <div class="col" ng-repeat="card in cards | filter:query">
+      <div ng-if=" card.type == 'music' " ng-include src="'ui/partials/cards/templates/musicCard.html'" ng-controller="cardController">
       </div>
-      <div ng-switch-default>
-        <div ng-include src="'ui/partials/cards/templates/filmCard.html'" ng-controller="cardController"></div>
+      <div ng-if=" card.type == 'film' " ng-include src="'ui/partials/cards/templates/filmCard.html'" ng-controller="cardController">
       </div>
     </div>
-  </span> 
-
-
-  
-  <p>Total number of cards: {{cards.length}}</p>
+  </div>

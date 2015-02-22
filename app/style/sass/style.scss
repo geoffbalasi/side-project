@@ -34,7 +34,6 @@ p, div, span {
 // Default Card Styling
 
 .card {
-	width: 400px;
 	height: $open-card-height;
 	background: $card-background-color;
 	margin: $large-pixel;
@@ -109,4 +108,58 @@ p, div, span {
 
 #music .date {
   background-color: $music-color;
+}
+
+.grid {
+	z-index: 1;
+}
+/* col */
+.col {
+	float: left;
+}
+
+/* 4 Columns */
+.grid .col {
+	width: 25.0%;
+}
+
+.grid .col:nth-of-type(4n+1) {
+	margin-left: 0;
+	clear: left;
+}
+
+/* 3 Columns */
+@media screen and (max-width: 1300px) {
+	.grid .col {
+		width: 33.3%;
+	}
+	.grid .col:nth-of-type(4n+1) {
+		clear: none;
+	}
+	.grid .col:nth-of-type(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+/* 2 Columns */
+@media screen and (max-width: 1000px) {
+	.grid .col {
+		width: 50%;
+	}
+	.grid .col:nth-of-type(3n+1) {
+		clear: none;
+	}
+	.grid .col:nth-of-type(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.col {
+		width: 100% !important;
+		margin-left: 0 !important;
+		clear: none !important;
+	}
 }
