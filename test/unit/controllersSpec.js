@@ -51,11 +51,11 @@ describe('Seer controllers', function() {
     }));
     
     it('should change card size', function() {
-      expect(scope.size).toBe('closed');
+      expect(scope.open).toBe(false);
       scope.changeSize();
-      expect(scope.size).toBe('open');
+      expect(scope.open).toBe(true);
       scope.changeSize();
-      expect(scope.size).toBe('closed');
+      expect(scope.open).toBe(false);
     });
   });
 });
