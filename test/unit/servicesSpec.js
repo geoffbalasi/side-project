@@ -3,7 +3,7 @@
 describe('service', function() {
 
   // load modules
-  beforeEach(module('SeerApp'));
+  beforeEach(module('App'));
 
   // Test service availability
   it('check the existence of card factory', inject(function(CardService) {

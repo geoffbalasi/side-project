@@ -2,7 +2,21 @@
 
 /* Card List Controllers */
 
-angular.module('SeerApp.controllers',[]).controller('mainController', ['$scope', 'CardService', function($scope, CardService) {
+angular.module('controllersModule',[]).controller('mainController', ['$scope', 'CardService', '$window', function($scope, CardService, $window) {
     $scope.cards = CardService.query();
-    $scope.name = 'Seer';
+    $scope.name = 'Side Project';
+    $scope.relocate = true;
+    $scope.load = true;
+
+    $scope.relocateCards = function() {
+        $scope.relocate = !$scope.relocate;
+    };
+
+    $scope.addCards = function() {
+        var additionalCards = $scope.cards.slice(0,20);
+        $scope.cards = $scope.cards.concat(additionalCards);
+        $scope.load = !$scope.load;
+        $scope.$digest();
+    };
+
 }]);

@@ -1,12 +1,16 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <h1>{{name}}</h1>
-  <div>
-    Search: <input ng-model="query">
+  <div class="page-header" infinite-scroll>
+    <span>{{name}}</span>
+    <span>Film</span>
+    <span>Music</span>
+    <span>Food</span>
+    <span>Books</span>
+    <span>Search:<input ng-model="query"></span>
   </div>
-  <div class="grid">
-    <div class="col" ng-repeat="card in cards | filter:query">
+  <div class="results-cards" card-locations >
+    <div class="" ng-repeat="card in cards | filter:query track by $index">
       <div ng-if=" card.type == 'music' " ng-include src="'ui/partials/cards/templates/musicCard.html'" ng-controller="cardController">
       </div>
       <div ng-if=" card.type == 'film' " ng-include src="'ui/partials/cards/templates/filmCard.html'" ng-controller="cardController">

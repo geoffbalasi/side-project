@@ -1,16 +1,26 @@
-<div ng-if="open" class="card" id="music" ng-click="changeSize()">
-	<div class="date">{{card.date}}</div>
-	<div class="header"> 
-		<img ng-src="{{card.art}}">
+<div class="card block" id="music" ng-click="changeSize()">
+	
+	<div ng-if="open" class="open">
+		<div class="date">{{::card.date}}</div>
+		<div class="header"> 
+			<img ng-src="{{::card.art}}">
+		</div>
+		<div class="body">
+			<div class="title music-text-color">{{::card.artist}}</div>
+			<div class="title music-text-color">{{::card.title}}</div>
+		</div>
+	  	
 	</div>
-  <div class="title music-text-color">{{card.artist}}</div>
-	<div class="title music-text-color">{{card.title}}</div>
+
+	<div ng-if="!open" class="closed">
+	  	<div class="date">{{::card.date}}</div>
+		<div class="header"> 
+			<img ng-src="{{::card.art}}">
+		</div>
+		<div class="body">
+			<div class="title music-text-color">{{::card.title}}</div>
+		</div>
+	</div>
+
 </div>
   
-<div ng-if="!open" class="card small" ng-click="changeSize()" id="music">
-  <div class="date">{{card.date}}</div>
-	<div class="header"> 
-		<img ng-src="{{card.art}}">
-	</div>
-	<div class="title music-text-color">{{card.title}}</div>
-</div>

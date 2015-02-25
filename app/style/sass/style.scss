@@ -33,12 +33,33 @@ p, div, span {
 
 // Default Card Styling
 
+.page-header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	background: #333;
+	height: 45px;
+
+	span {
+		padding: 20px;
+		top: 13px;
+		font-size: 14px;
+		color: #efefef;
+	}
+}
+
+.results-cards {
+	top: 30px;
+}
+
 .card {
-	height: $open-card-height;
 	background: $card-background-color;
 	margin: $large-pixel;
-	padding: $medium-pixel;
+	// padding: $medium-pixel;
 	box-shadow: $shadow;
+	border-radius: $radius-small;
+	overflow: hidden;
+	cursor: pointer;
 
 	.content-block {
 		span:first-child {
@@ -46,19 +67,37 @@ p, div, span {
 		}
 
 		div {
-			padding: 7px;
+			padding: 7px 0px;
+		}
+
+		div.light {
+			color: #999;
 		}
 	}
   
   .header {
     img {
-      height: 80px;
-      width: auto;
+      height: 200px;
+	  width: 300px;
     }
+  }
+  .body {
+    padding: 5px 15px;
+  }
+  .sub-title {
+  	font-size: 10px;
+  }
+  .title {
+  	font-size: 20px;
+	padding-bottom: 5px;
   }
 }
 
-.card.small {
+.card.open {
+	height: $open-card-height;
+}
+
+.card.closed {
     height: $closed-card-height;
 }
 
@@ -70,6 +109,8 @@ p, div, span {
 	font: $h2-bold;	
 	text-align: center;
 	border-radius: $default-radius;
+	z-index: 1;
+	margin: 10px 0px;
 }
 
 // Concert Card Styling
@@ -108,6 +149,12 @@ p, div, span {
 
 #music .date {
   background-color: $music-color;
+}
+
+.block {
+    position: absolute;
+    // padding: 20px;
+    width: 300px;
 }
 
 .grid {

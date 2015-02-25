@@ -17,7 +17,7 @@ describe('Seer controllers', function() {
     var scope, ctrl, $httpBackend;
     
     //Load our app module definition before each test.
-    beforeEach(module('SeerApp'));
+    beforeEach(module('App'));
     
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
@@ -44,7 +44,7 @@ describe('Seer controllers', function() {
   describe('cardController', function(){
     var scope, ctrl;
     
-    beforeEach(module('SeerApp'));
+    beforeEach(module('App'));
     beforeEach(inject(function($rootScope, $controller) {
       scope = $rootScope.$new();
       ctrl = $controller('cardController', {$scope: scope});

@@ -1,6 +1,6 @@
-var seerServices = angular.module('seerServices', ['ngResource']);
+var servicesModule = angular.module('servicesModule', ['ngResource']);
 
-seerServices.factory('CardService', ['$resource',
+servicesModule.factory('CardService', ['$resource',
   function($resource){
     return $resource('cards.json', {}, {
       query: {method:'GET', isArray:true}

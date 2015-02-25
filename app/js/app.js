@@ -3,11 +3,12 @@
 (function () { 'use strict';
 
     // Declare app level module and dependencies
-    angular.module('SeerApp', [
+    angular.module('App', [
         'ngRoute',
         'ngAnimate',
-        'SeerApp.controllers',
-        'seerServices'
+        'controllersModule',
+        'directivesModule',
+        'servicesModule'
     ]).
     config(['$routeProvider', 
       function ($routeProvider) {
