@@ -2,35 +2,36 @@
  * animations
  */
 @import "sizing";
-
-.card.ng-enter {
+/*
+.open.ng-enter {
   -webkit-transition: 0.2s ease-out all;
   -moz-transition: 0.2s ease-out all;
   -o-transition: 0.2s ease-out all;
   transition: 0.2s ease-out all;
 }
 
-.card.ng-enter{
+.open.ng-enter{
   height: $closed-card-height;
   overflow: hidden;
 }
 
-.card.ng-enter.ng-enter-active {
+.open.ng-enter.ng-enter-active {
   height: $open-card-height;
 }
 
-.card.small.ng-enter {
+.closed.ng-enter {
   -webkit-transition: 0.1s ease-out all;
   -moz-transition: 0.1s ease-out all;
   -o-transition: 0.1s ease-out all;
   transition: 0.1s ease-out all;
 }
 
-.card.small.ng-enter{
+.closed.ng-enter{
   height: $open-card-height;
   overflow: hidden;
 }
 
-.card.small.ng-enter.ng-enter-active {
+.closed.ng-enter.ng-enter-active {
   height: $closed-card-height;
 }
+*/
