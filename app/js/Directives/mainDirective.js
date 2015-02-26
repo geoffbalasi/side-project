@@ -1,3 +1,4 @@
+/*global angular, $*/
 
 var myDirectives = angular.module('directivesModule', []);
 
@@ -29,7 +30,7 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
 			var blocks = [];
 
 			scope.onResize = function() {
-                windowWidth = $window.innerWidth;
+        windowWidth = $window.innerWidth;
 				blocks = [];
 				colCount = Math.floor(windowWidth/(colWidth+margin*2));
 				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 30;
@@ -39,9 +40,9 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
 				scope.positionBlocks();
             };
 
-            scope.positionBlocks = function() {
-            	angular.forEach(angular.element(".block"), function(block, i){
-				    var min = Array.min(blocks);
+      scope.positionBlocks = function() {
+        angular.forEach(angular.element(".block"), function(block, i){
+				  var min = Array.min(blocks);
 					var index = blocks.indexOf(min);
 					var leftPos = margin+(index*(colWidth+margin));
 					$(block).css({
@@ -65,7 +66,7 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
             });
 
             scope.$watch('relocate', function (newVal, oldVal) {
-            	setTimeout(function(){ scope.onResize();}, 50);
+            	setTimeout(function(){ scope.onResize();}, 250);
             });
 
             scope.$watch('query', function (newVal, oldVal) {
