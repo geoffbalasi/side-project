@@ -1,6 +1,7 @@
 
 var myDirectives = angular.module('directivesModule', []);
 
+// Directive that adds more cards when you reach the bottom of the page
 myDirectives.directive('infiniteScroll', ['$window', '$document', function($window, $document) {
 	return {
 		link: function(scope) {
@@ -9,14 +10,34 @@ myDirectives.directive('infiniteScroll', ['$window', '$document', function($wind
                     scope.addCards();
                 }
             });
-
-            scope.$watch('load', function (newVal, oldVal) {
-            	setTimeout(function(){ scope.onResize();}, 50);
-            });
 		}
 	}
 }]);
 
+// Directive that renders a card, currently takes the url of the card template as a param 
+myDirectives.directive("card", function() {
+        return({
+            controller: "cardController",
+            restrict: "A",
+            templateUrl: template
+        });
+ 
+        function template(element, attrs) {
+        	return attrs.url;
+        };
+    }
+);
+
+// Directive that emits an event when the last card is built to position them 
+myDirectives.directive('onLastRepeat', function() {
+    return function(scope, element, attrs) {
+        if (scope.$last) setTimeout(function(){
+            scope.$emit('repositionCards');
+        }, 1);
+    };
+});
+
+// Directive that positions the cards in the correct locations
 myDirectives.directive('cardLocations', ['$window', function($window) {
 	return {
 		link: function(scope) {
@@ -26,29 +47,29 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
 			var margin = 10;
 			var spaceLeft = 0;
 			var windowWidth = 0;
-			var blocks = [];
+			var cards = [];
 
 			scope.onResize = function() {
                 windowWidth = $window.innerWidth;
-				blocks = [];
+				cards = [];
 				colCount = Math.floor(windowWidth/(colWidth+margin*2));
 				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 30;
 				for(var i=0;i<colCount;i++){
-					blocks.push(margin);
+					cards.push(margin);
 				}
-				scope.positionBlocks();
+				scope.positionCards();
             };
 
-            scope.positionBlocks = function() {
+            scope.positionCards = function() {
             	angular.forEach(angular.element(".block"), function(block, i){
-				    var min = Array.min(blocks);
-					var index = blocks.indexOf(min);
+				    var min = Array.min(cards);
+					var index = cards.indexOf(min);
 					var leftPos = margin+(index*(colWidth+margin));
 					$(block).css({
 						'left':(leftPos+spaceLeft)+'px',
 						'top':min+'px'
 					});
-					blocks[index] = min+$(block).outerHeight()+margin;
+					cards[index] = min+$(block).outerHeight()+margin;
 				});
 			};
 
@@ -56,18 +77,17 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
 			    return Math.min.apply(Math, array);
 			};
 
-            setTimeout(function(){ 
-            	scope.onResize();
-            }, 1500);
+			// repositions cards when the 'repositionCards' event is emited
+			scope.$on('repositionCards', function(scope){
+		        scope.currentScope.onResize();
+		    });
 
+			// repositions cards on window resize
             angular.element($window).bind('resize', function() {
                 scope.onResize();
             });
 
-            scope.$watch('relocate', function (newVal, oldVal) {
-            	setTimeout(function(){ scope.onResize();}, 50);
-            });
-
+            // respositions cards when a filter words is searched
             scope.$watch('query', function (newVal, oldVal) {
             	setTimeout(function(){ scope.onResize();}, 50);
             });
