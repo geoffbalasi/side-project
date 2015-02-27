@@ -1,10 +1,10 @@
 <div class="card block" id="film" ng-click="changeSize()">
 
+	<div class="date">{{::card.date}}</div>
+	<div class="header"> 
+		<img ng-src="{{::card.imageUrl}}" fade-in>
+	</div>
 	<div ng-if="open" class="open">
-		<div class="date">{{::card.date}}</div>
-		<div class="header"> 
-			<img ng-src="{{::card.imageUrl}}">
-		</div>
 		<div class="body">
 			<div class="title film-text-color">{{::card.title}}</div>
 			<div class="sub-title">{{::card.tagline}}</div> 
@@ -26,10 +26,6 @@
 	</div>
 	
 	<div ng-if="!open" class="closed">
-	  	<div class="date">{{::card.date}}</div>
-		<div class="header"> 
-			<img ng-src="{{::card.imageUrl}}">
-		</div>
 		<div class="body">
 			<div class="title film-text-color">{{::card.title}}</div>
 		</div>

@@ -8,7 +8,7 @@ angular.module('controllersModule',[]).controller('mainController', ['$scope', '
 
     // add additional cards
     $scope.addCards = function() {
-        var additionalCards = $scope.cards.slice(0,20);
+        var additionalCards = $scope.cards.slice(0, 40);
         $scope.cards = $scope.cards.concat(additionalCards);
         $scope.$digest();
         setTimeout(function(){

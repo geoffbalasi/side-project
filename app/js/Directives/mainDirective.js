@@ -14,6 +14,14 @@ myDirectives.directive('infiniteScroll', ['$window', '$document', function($wind
 	}
 }]);
 
+myDirectives.directive("fadeIn", function() {
+	return function(scope, element, attrs) {
+        element.on('load', function() {
+        	element.fadeTo( 400, 1) 
+        });
+    };
+});
+
 // Directive that renders a card, currently takes the url of the card template as a param 
 myDirectives.directive("card", function() {
         return({
