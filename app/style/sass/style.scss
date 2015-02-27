@@ -37,14 +37,53 @@ p, div, span {
 	position: fixed;
 	z-index: 2;
 	width: 100%;
-	background: #333;
-	height: 45px;
+	background: #1EAAF1;
+	height: 50px;
 
 	span {
-		padding: 20px;
-		top: 13px;
 		font-size: 14px;
-		color: #efefef;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	input {
+		background: #1EAAF1;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid #B7DAFF;
+		padding: 3px;
+		margin: 0px 10px;
+		color: #fff;
+		position: relative;
+	}
+
+	img {
+		height: 16px;
+		display: block;
+		padding-left: 166px;
+		margin-top: -18px;
+	}
+}
+
+#nav {
+    text-align: justify;
+    min-width: 500px;
+    width: 80%;
+	margin: auto;
+}
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#nav li {
+    display: inline-block;
+    padding-top: 13px;
+}
+
+#nav li:first-child {
+	span {
+		font-weight: bold;
 	}
 }
 
@@ -56,7 +95,7 @@ p, div, span {
 	background: $card-background-color;
 	margin: $large-pixel;
 	// padding: $medium-pixel;
-	box-shadow: $shadow;
+	border: 1px solid #ededed;
 	border-radius: $radius-small;
 	overflow: hidden;
 	cursor: pointer;
@@ -80,6 +119,10 @@ p, div, span {
       height: 200px;
 	  width: 300px;
 	  opacity: 0;
+    }
+    div {
+    	height: 4px;
+		margin-top: -3px;
     }
   }
   .body {

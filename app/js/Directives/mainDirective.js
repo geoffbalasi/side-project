@@ -61,7 +61,7 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
                 windowWidth = $window.innerWidth;
 				cards = [];
 				colCount = Math.floor(windowWidth/(colWidth+margin*2));
-				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 30;
+				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 40;
 				for(var i=0;i<colCount;i++){
 					cards.push(margin);
 				}

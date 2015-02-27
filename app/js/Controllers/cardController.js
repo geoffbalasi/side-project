@@ -17,6 +17,6 @@ angular.module('controllersModule').controller('cardController', ['$scope', func
         }
         setTimeout(function(){
             $scope.$emit('repositionCards');
-        }, 1);
+        }, 300);
     };
 }]);
