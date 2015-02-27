@@ -16,6 +16,7 @@ angular.module('controllersModule',[]).controller('mainController', ['$scope', '
         var additionalCards = $scope.cards.slice(0,20);
         $scope.cards = $scope.cards.concat(additionalCards);
         $scope.load = !$scope.load;
+        console.log("add cards");
         $scope.$digest();
     };
 
