@@ -10,10 +10,10 @@
     <span>Search:<input ng-model="query"></span>
   </div>
   <div class="results-cards" card-locations >
-    <div class="" ng-repeat="card in cards | filter:query">
-      <div ng-if=" card.type == 'music' " ng-include src="'ui/partials/cards/templates/musicCard.html'" ng-controller="cardController">
+    <div class="" ng-repeat="card in cards | filter:query track by $index" on-last-repeat >
+      <div ng-if=" card.type == 'music' " card url="ui/partials/cards/templates/musicCard.html">
       </div>
-      <div ng-if=" card.type == 'film' " ng-include src="'ui/partials/cards/templates/filmCard.html'" ng-controller="cardController">
+      <div ng-if=" card.type == 'film' " card url="ui/partials/cards/templates/filmCard.html">
       </div>
     </div>
   </div>

@@ -11,7 +11,7 @@ describe('Seer controllers', function() {
     });
   });
   
-  beforeEach(module('seerServices'));
+  beforeEach(module('servicesModule'));
   
   describe('mainController', function(){
     var scope, ctrl, $httpBackend;
@@ -37,9 +37,6 @@ describe('Seer controllers', function() {
         [{name: 'Gone Girl'}, {name: 'Selma'}]);
     });
     
-    it('should be named "Seer"', function() {
-      expect(scope.name).toBe('Seer');
-    });
   });
   describe('cardController', function(){
     var scope, ctrl;

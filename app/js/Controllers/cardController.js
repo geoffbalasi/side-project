@@ -6,15 +6,17 @@ angular.module('controllersModule').controller('cardController', ['$scope', func
 
     $scope.open = (typeof $scope.card !== 'undefined') ? $scope.card.open : false;
 
+    // open or close the card
     $scope.changeSize = function() {
         if($scope.open === false)
         {
             $scope.open = true;
-            $scope.relocateCards();
         }
         else {
             $scope.open = false;
-            $scope.relocateCards();
         }
+        setTimeout(function(){
+            $scope.$emit('repositionCards');
+        }, 1);
     };
 }]);
