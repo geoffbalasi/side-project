@@ -17,7 +17,9 @@ myDirectives.directive('infiniteScroll', ['$window', '$document', function($wind
 myDirectives.directive("fadeIn", function() {
 	return function(scope, element, attrs) {
         element.on('load', function() {
-        	element.fadeTo( 400, 1) 
+        	element.height(this.height);
+        	element.fadeTo(400, 1) ;
+        	scope.$emit('repositionCards');
         });
     };
 });
@@ -41,7 +43,7 @@ myDirectives.directive('onLastRepeat', function() {
     return function(scope, element, attrs) {
         if (scope.$last) setTimeout(function(){
             scope.$emit('repositionCards');
-        }, 1);
+        }, 100);
     };
 });
 
@@ -61,7 +63,7 @@ myDirectives.directive('cardLocations', ['$window', function($window) {
                 windowWidth = $window.innerWidth;
 				cards = [];
 				colCount = Math.floor(windowWidth/(colWidth+margin*2));
-				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 40;
+				spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2 - 30;
 				for(var i=0;i<colCount;i++){
 					cards.push(margin);
 				}

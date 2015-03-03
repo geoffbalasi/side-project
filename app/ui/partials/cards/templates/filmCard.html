@@ -1,35 +1,51 @@
-<div class="card block" id="film" ng-click="changeSize()">
+<div class="card block" id="film">
 
-	<div class="date">{{::card.date}}</div>
-	<div class="header"> 
-		<img ng-src="{{::card.imageUrl}}" fade-in>
-		<div class="film-highlight-color"></div>
+	<div class="card-header"> 
+		<span class="film-text-color type"> {{::card.type}} </span>
+		<span class="title"> {{::card.title}} </span>
+		<span class="film-text-color date"> {{::card.date}} </span>  
 	</div>
-	<div ng-if="open" class="open">
-		<div class="body">
-			<div class="title film-text-color">{{::card.title}}</div>
-			<div class="sub-title">{{::card.tagline}}</div> 
-			<div class="content-block"> 
-				<div> 
-					<span> {{::card.time}} - {{::card.rating}} - </span>
-					<span> {{::card.genre}} </span> 
+	<div class="lens"> 
+		<img ng-src="{{::card.imageUrl}}" ng-click="changeSize()" fade-in>
+		<div ng-if="!open" class="film-highlight-color color-bar"></div>
+		<div ng-if="open" class="overlay">
+			<div class="film-highlight-color color-bar"></div>
+			<div class="body">
+				<div class="content-block"> 
+					<div> 
+						<span> {{::card.time}} - {{::card.rating}} </span>
+						<span> - {{::card.genre}} </span> 
+					</div>
+					<div class="light"> {{::card.creators}} </div>
 				</div>
-				<div class="light"> {{::card.creators}} </div>
-			</div>
-			<div class="content-block"> 
-				<div> 
-					<span> {{::card.score-percentage}}% </span> 
-					<span> {{::card.source}} </span> 
+				<div class="content-block"> 
+					<div> 
+						<span> {{::card.scorepercentage}}% </span> 
+						<span> - via {{::card.source}} </span> 
+					</div>
+					<div class="light"> {{::card.consensus}} </div>
 				</div>
-				<div class="light"> {{::card.consensus}} </div>
+				<div class="trigger"> 
+					<div>
+						<span> Get Tickets </span>
+						<span> - via Fandango </span>
+					</div>
+				</div>
+				<div class="trigger"> 
+					<div>
+						<span> 23 Days Away </span>
+						<span> - Share </span>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
 	
-	<div ng-if="!open" class="closed">
-		<div class="body">
-			<div class="title film-text-color">{{::card.title}}</div>
-		</div>
+	
+	<div class="card-footer">
+		<span class="footer-text open" ng-click="changeSize()"> {{ open == true ? 'less' : 'more' }}</span>
+		<span class="footer-text source"> via IMDb </span> 
 	</div>
 
 </div>
