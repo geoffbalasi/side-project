@@ -3,34 +3,34 @@
  */
 @import "sizing";
 
-.open.ng-enter {
+.overlay.ng-enter {
   -webkit-transition: 0.2s ease-out all;
   -moz-transition: 0.2s ease-out all;
   -o-transition: 0.2s ease-out all;
   transition: 0.2s ease-out all;
 }
 
-.open.ng-enter{
-  height: $closed-card-height;
+.overlay.ng-enter{
+  height: 0;
   overflow: hidden;
 }
 
-.open.ng-enter.ng-enter-active {
-  height: $open-card-height;
+.overlay.ng-enter.ng-enter-active {
+  height: $overlay-height;
 }
 
-.closed.ng-enter {
+.overlay.ng-leave {
   -webkit-transition: 0.1s ease-out all;
   -moz-transition: 0.1s ease-out all;
   -o-transition: 0.1s ease-out all;
   transition: 0.1s ease-out all;
 }
 
-.closed.ng-enter{
-  height: $open-card-height;
+.overlay.ng-leave{
+  height: $overlay-height;
   overflow: hidden;
 }
 
-.closed.ng-enter.ng-enter-active {
-  height: $closed-card-height;
+.overlay.ng-leave.ng-leave-active {
+  height: 0;
 }

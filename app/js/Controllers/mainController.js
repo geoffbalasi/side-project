@@ -15,5 +15,4 @@ angular.module('controllersModule',[]).controller('mainController', ['$scope', '
             $scope.$emit('repositionCards');
         }, 1);
     };
-
 }]);
