@@ -4,7 +4,7 @@
 
 angular.module('controllersModule',[]).controller('mainController', ['$scope', 'CardService', '$window', function($scope, CardService, $window) {
     $scope.cards = CardService.query();
-    $scope.name = 'Side Project';
+    $scope.name = 'AlwaysNext';
 
     // add additional cards
     $scope.addCards = function() {
