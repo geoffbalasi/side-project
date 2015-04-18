@@ -90,7 +90,8 @@ p, div, span {
 	top: 30px;
 }
 
-.card {
+@mixin card($type-color) {
+
 	background: $card-background-color;
 	margin: $large-pixel;
 	// padding: $medium-pixel;
@@ -101,7 +102,7 @@ p, div, span {
 	.content-block {
 		span:first-child {
 			font-weight: $bold;
-			color: $film-color;
+			color: $type-color;
 		}
 
 		div {
@@ -123,11 +124,13 @@ p, div, span {
 	    	height: 4px;
 			margin-top: -4px;
 	    }
+    
 	}
   	.overlay {
 		position: absolute;
 		bottom: 0px;
 		background-color: rgba(#FFF, .9);
+    width: 300px;
 	}
   	.body {
     	padding: 5px 15px;
@@ -148,7 +151,7 @@ p, div, span {
 
 	  	.open:hover, .source:hover {
 	  		cursor: pointer;
-	  		color: $film-color;
+	  		color: $type-color;
 	  	}
 	  	.title {
 	  		font-size: 16px;
@@ -186,23 +189,16 @@ p, div, span {
 
 		span:first-child {
 			font-weight: $bold;
-			color: $film-color;
-		}
+			color: $type-color;
+		}  
+      
   	}
+
 
 }
 
-// .date {
-// 	position: absolute;
-// 	right: 10px;
-// 	padding: 3px 7px 1px 7px;
-// 	color: $default-light-font;
-// 	font: $h2-bold;	
-// 	text-align: center;
-// 	border-radius: $default-radius;
-// 	z-index: 1;
-// 	margin: 10px 0px;
-// }
+#film.card { @include card($film-color); }
+#music.card { @include card($music-color); }
 
 // Concert Card Styling
 

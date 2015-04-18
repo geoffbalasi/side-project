@@ -1,21 +1,55 @@
-<div class="card block" id="music" ng-click="changeSize()">
-	<div class="date">{{::card.date}}</div>
-	<div class="header"> 
-		<img ng-src="{{::card.art}}" fade-in>
-		<div class="music-highlight-color"></div>
-	</div>
-	<div ng-if="open" class="open">
-		<div class="body">
-			<div class="title music-text-color">{{::card.artist}}</div>
-			<div class="title music-text-color">{{::card.title}}</div>
-		</div>
-	  	
-	</div>
+<div class="card block" id="music">
 
-	<div ng-if="!open" class="closed">
-		<div class="body">
-			<div class="title music-text-color">{{::card.title}}</div>
+	<div class="card-header"> 
+		<span class="music-text-color type"> {{::card.type}} </span>
+		<span class="title"> {{::card.artist}} </span>
+		<span class="music-text-color date"> {{::card.date}} </span>  
+	</div>
+	<div class="lens"> 
+		<img ng-src="{{::card.imageUrl}}" ng-click="changeSize()" fade-in>
+		<div ng-if="!open" class="music-highlight-color color-bar"></div>
+		<div ng-if="open" class="overlay">
+			<div class="music-highlight-color color-bar"></div>
+			<div class="body">
+				<div class="content-block"> 
+					<div> 
+						<span> {{::card.album}} </span>
+						<span> - {{::card.genre}} </span> 
+					</div>
+					<div class="light"> {{::card.description}} - {{::card.label}} </div>
+				</div>
+				<div class="content-block"> 
+					<div> 
+						<span> {{::card.numtracks}} tracks </span> 
+					</div>
+				</div>
+				<div class="trigger"> 
+					<div>
+						<span> Lifted Up ... </span>
+						<span> - Play on O <img id="spotify" src="ui/images/spotifyLogo.png"></span>
+					</div>
+				</div>
+        <div class="trigger"> 
+					<div>
+						<span> Pre-order </span>
+						<span> - via iTunes </span>
+					</div>
+				</div>
+				<div class="trigger"> 
+					<div>
+						<span> 5 Days Away </span>
+						<span> - Share </span>
+					</div>
+				</div>
+
+			</div>
 		</div>
+	</div>
+	
+	
+	<div class="card-footer">
+		<span class="footer-text open" ng-click="changeSize()"> {{ open == true ? 'less' : 'more' }}</span>
+		<span class="footer-text source"> via metacritic </span> 
 	</div>
 
 </div>
