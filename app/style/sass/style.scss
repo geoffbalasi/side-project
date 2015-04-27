@@ -31,13 +31,11 @@ p, div, span {
 	position: relative;
 }
 
-// Default Card Styling
-
 .page-header {
 	position: fixed;
 	z-index: 2;
 	width: 100%;
-	background: #1EAAF1;
+	background: #0A2565;
 	height: 50px;
 
 	span {
@@ -46,7 +44,7 @@ p, div, span {
 	}
 
 	input {
-		background: #1EAAF1;
+		background: #0A2565;
 		border: none;
 		outline: none;
 		border-bottom: 1px solid #B7DAFF;
@@ -63,6 +61,8 @@ p, div, span {
 		margin-top: -18px;
 	}
 }
+
+// Default Card Styling
 
 #nav {
     text-align: justify;
