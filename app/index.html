@@ -31,6 +31,13 @@
 <body>
 
 <div ng-view></div>
+ 
+<script type="text/javascript">
+        function init() {
+            google.devrel.samples.hello.init('//' + window.location.host + '/_ah/api');
+        }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>  
   
 </body>
 </html>
