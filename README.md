@@ -5,7 +5,8 @@ a side project from Kevin &amp; Geoff
 NodeJS and npm are required.  
 You can download a Node.js installer for your operating system from http://nodejs.org/download/.  
 To compile the CSS you need Compass installed  
-Run  sudo gem install compass  
+Run  sudo gem install compass
+
 ---
 console commands:
 
