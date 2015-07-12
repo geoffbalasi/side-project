@@ -20,7 +20,7 @@ From the top of the project:
 
 From app/style:  
 
-'compass compile' - Create css files from sass files
+'compass compile' - Create css files from sass files  
 'compass watch' - Watch for changes to sass files and automatically output new css files
 
 ---
