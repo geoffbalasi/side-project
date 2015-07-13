@@ -1,6 +1,8 @@
 'use strict';
 function init() {
-    window.init();
+    angular.element(document).ready(function() {
+        window.init();
+    });
 }
 
 /* Card List Controllers */
@@ -15,12 +17,13 @@ angular.module('controllersModule',[])
         console.log("in initgapi");
         var ROOT = '//' + window.location.host + '/_ah/api';
         gapi.client.load('alwaysnext', 'v1', function() {
-                 gapi.client.alwaysnext.greetings.listGreeting().execute(function(resp){
-                     alert(resp);
+                 gapi.client.alwaysnext.cards.listGreeting().execute(function(resp){
+                     $scope.cards = resp.items;
+                     $scope.$apply();
                  });
         }, ROOT);
     };
-    $scope.cards = CardService.query();
+    
     $scope.name = 'AlwaysNext';
 
     // add additional cards
